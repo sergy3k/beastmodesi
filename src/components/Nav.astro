@@ -2,17 +2,47 @@
 import "../styles/global.css";
 ---
 
-<nav class="w-full text-[20px] font-extrabold bg-black" style="">
-    
-    <div class = "mt-4 mb-4 flex ml-7 mr-7 justify-between">
-    <a href="/" class="font-bold">
-        <img src="/public/beastmodeletters.avif " alt="Logo" class="h-15">
-    </a>
-    <div class="flex gap-8 mt-4 ">
-
-        <a href="skills" class=" text-orange-400 hover:text-orange-500 hover:underline">PRODUCTS</a>
-        <a href="contactes" class="text-orange-400 hover:text-orange-500 hover:underline">BEAST MOMENTS</a>
+<nav class="text-[20px] font-extrabold bg-black mt-4 mb-4 flex items-center">
+    <div class="flex items-center w-full">
+        <a href="/" class="flex items-center ml-10 hover:scale-110 hover:animate-pulse transition-transform duration-100">
+            <img src="/public/beastmodeletters.avif" alt="Logo" class="h-12">
+        </a>
+        <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
+            <a href="/products" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">PRODUCTS</a>
+            <a href="/about" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">ABOUT</a>
+            <a href="/contact" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">BEASTMOMENTS</a>
+        </div>
     </div>
-</div>
-<hr class="border-orange-400 border-4  mt-4" />
+
+    <div class="ml-auto mr-10 relative" id="language-container">
+        <button id="language-menu-button" type="button" class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="Spanish Flag" class="h-7 w-12">
+        </button>
+        <div id="language-menu" class="hidden absolute right-0 mt-2 w-40 bg-black border border-orange-300 rounded shadow-lg z-50">
+            <a href="404" class="block px-4 py-2 text-orange-400 hover:bg-gray-700">Français</a>
+            <a href="404" class="block px-4 py-2 text-orange-400 hover:bg-gray-700">English</a>
+            <a href="404" class="block px-4 py-2 text-orange-400 hover:bg-gray-700">Italiano</a>
+        </div>
+    </div>
 </nav>
+
+<hr class="border-orange-400 border-2" />
+
+<script>
+    const button = document.getElementById('language-menu-button');
+    const menu = document.getElementById('language-menu');
+    const container = document.getElementById('language-container');
+
+    if (button && menu && container) {
+        button.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (event) => {
+           
+            if (!container.contains(event.target)) {
+                menu.classList.add('hidden');
+            }
+        });
+    }
+</script>

@@ -3,29 +3,34 @@ import "../styles/global.css";
 ---
 <div class="flex flex-col items-center relative">
     <div class="mt-10 flex flex-col items-center">
-        <img src="/public/logobeast.avif" alt="Logo" class="h-40 sm:h-50 z-10 hover:scale-110 transition-transform duration-300">
+        <img src="/public/logobeast.avif" alt="Logo" class="h-40 sm:h-50 z-10">
         <div class="flex flex-wrap justify-center gap-4 mt-6 sm:mt-10 z-10">
-            <a href="/" class="hover:scale-110 transition-transform duration-300">
+            <a href="/" class="group hover:scale-110 transition-transform duration-300 relative">
                 <img src="/public/editada1.avif" alt="Lata 1"
                 class="h-40 sm:h-100 w-full sm:w-auto filter drop-shadow-[0_0_4px_rgba(255,165,0,0.4)] hover:drop-shadow-[0_0_12px_rgba(255,165,0,0.9)] transition-all duration-300">
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full text-orange-400 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">PAPAYA BEAST</span>
             </a>
-            <a href="/" class="hover:scale-110 transition-transform duration-300">
+            <a href="/" class="group hover:scale-110 transition-transform duration-300 relative">
                 <img src="/public/editada2.avif" alt="Lata 2"
                 class="h-40 sm:h-100 w-full sm:w-auto filter drop-shadow-[0_0_4px_rgba(255,255,0,0.4)] hover:drop-shadow-[0_0_12px_rgba(255,255,0,0.9)] transition-all duration-300">
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full text-yellow-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">FERAL LEMON</span>
             </a>
-            <a href="/" class="hover:scale-110 transition-transform duration-300">
+            <a href="/" class="group hover:scale-110 transition-transform duration-300 relative">
                 <img src="/public/editada4.avif" alt="Lata 3"
                 class="h-40 sm:h-100 w-full sm:w-auto filter drop-shadow-[0_0_4px_rgba(0,255,0,0.4)] hover:drop-shadow-[0_0_12px_rgba(0,255,0,0.9)] transition-all duration-300">
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full text-green-600 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">ANIMAL APPLE</span>
             </a>
-            <a href="/" class="hover:scale-110 transition-transform duration-300">
+            <a href="/" class="group hover:scale-110 transition-transform duration-300 relative">
                 <img src="/public/editada3.avif" alt="Lata 4"
                 class="h-40 sm:h-100 w-full sm:w-auto filter drop-shadow-[0_0_4px_rgba(255,255,255,0.4)] hover:drop-shadow-[0_0_12px_rgba(255,255,255,0.9)] transition-all duration-300">
+                <span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-full text-white text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-bold">BLUEBERRY SAVAGE</span>
             </a>
         </div>
-        <h1 class="text-white text-2xl sm:text-4xl font-bold text-center mt-8 z-10">FOR GAMERS & ATHLETES</h1>
+        <h1 class="text-white text-2xl sm:text-4xl font-bold text-center mt-15 mb-5 z-10">FOR GAMERS & ATHLETES</h1>
     </div>
-    <video autoplay muted loop class="absolute top-0 left-0 w-full h-210 object-cover -z-10 opacity-40 filter grayscale">
-        <source src="/public/trentwinsbeastmode.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-</div>
+    <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover -z-10 opacity-40 filter grayscale"
+    style="mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%); 
+           -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);">
+    <source src="/public/trentwinsbeastmode.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
