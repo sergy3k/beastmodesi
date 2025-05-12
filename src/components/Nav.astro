@@ -2,19 +2,19 @@
 import "../styles/global.css";
 ---
 
-<nav class="text-[20px] font-extrabold bg-black mt-4 mb-4 flex items-center">
-    <div class="flex items-center w-full">
+<nav class="text-[20px] font-extrabold bg-gradient-to-b from-black to-transparent mb-4 flex items-center fixed top-0 left-0 w-screen z-50 py-4 ">
+    <div class="flex items-center w-full mb-10">
         <a href="/" class="flex items-center ml-10 hover:scale-110 hover:animate-pulse transition-transform duration-100">
             <img src="/public/beastmodeletters.avif" alt="Logo" class="h-12">
         </a>
         <div class="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center">
-            <a href="/products" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">PRODUCTS</a>
-            <a href="/about" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">ABOUT</a>
-            <a href="/contact" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">BEASTMOMENTS</a>
+            <a href="#PRODUCTS" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">PRODUCTOS</a>
+            <a href="#ABOUTUS" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">SOBRE NOSOTROS</a>
+            <a href="#BEASTREVIEWS" class="text-orange-400 hover:text-orange-500 hover:underline mx-4">BEASTREVIEWS</a>
         </div>
     </div>
 
-    <div class="ml-auto mr-10 relative" id="language-container">
+    <div class="ml-auto mr-10 relative mb-10" id="language-container">
         <button id="language-menu-button" type="button" class="flex items-center">
             <img src="https://upload.wikimedia.org/wikipedia/en/9/9a/Flag_of_Spain.svg" alt="Spanish Flag" class="h-7 w-12">
         </button>
@@ -26,7 +26,6 @@ import "../styles/global.css";
     </div>
 </nav>
 
-<hr class="border-orange-400 border-2" />
 
 <script>
     const button = document.getElementById('language-menu-button');
@@ -38,11 +37,6 @@ import "../styles/global.css";
             menu.classList.toggle('hidden');
         });
 
-        document.addEventListener('click', (event) => {
-           
-            if (!container.contains(event.target)) {
-                menu.classList.add('hidden');
-            }
-        });
+        
     }
 </script>

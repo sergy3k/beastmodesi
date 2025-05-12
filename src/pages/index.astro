@@ -3,11 +3,66 @@ import Nav from '../components/Nav.astro';
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css';
 import Selector from '../components/Selector.astro';
+import Herosection from '../components/Herosection.astro';
+import AboutUS from '../components/AboutUS.astro';
+import Footer from '../components/Footer.astro';
+import Review from '../components/Review.astro';
 ---
+
 <Layout>
 	<Nav />
+
+	<Herosection />
+	<AboutUS />
+	<Selector />
+
+
+	<div class="relative w-full max-w-2xl mx-auto mt-10 mb-20">
+		<button id="prev-review" class="absolute left-[-50px] top-[250px] -translate-y-1/2 bg-orange-400 hover:bg-orange-500 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-10 w-10">
+			&#8592;
+		</button>
+
+		<div id="review-container" class="overflow-hidden relative">
+			<div id="review-track" class="flex transition-transform duration-500 ease-in-out">
+				<div class="w-full flex-shrink-0 px-4">
+					<Review usuario="Antonio Maspalomas" cargo="CEFP Nuria CEO" reseña='"Me he sentido como una bestia entrenando, recomendadisima!"' />
+				</div>
+				<div class="w-full flex-shrink-0 px-4">
+					<Review usuario="Laura Fernández" cargo="Entrenadora Personal" reseña='"Una experiencia increíble, superó todas mis expectativas. ¡Volveré sin duda!"' />
+				</div>
+				<div class="w-full flex-shrink-0 px-4">
+					<Review usuario="Carlos Martínez" cargo="Atleta Profesional" reseña='"El mejor entrenamiento que he tenido en años. ¡Altamente recomendado!"' />
+				</div>
+			</div>
+		</div>
+
+		<button id="next-review" class="absolute right-[-50px] top-[250px] -translate-y-1/2 bg-orange-400 hover:bg-orange-500 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-10 w-10">
+			&#8594;
+		</button>
+	</div>
+
+	<Footer />
 </Layout>
 
-<Selector />
+<script type="module">
+	const track = document.getElementById('review-track');
+	const prev = document.getElementById('prev-review');
+	const next = document.getElementById('next-review');
 
+	let index = 0;
+	const total = 3;
 
+	function updateCarousel() {
+		track.style.transform = `translateX(-${index * 100}%)`;
+	}
+
+	prev.addEventListener('click', () => {
+		index = (index - 1 + total) % total;
+		updateCarousel();
+	});
+
+	next.addEventListener('click', () => {
+		index = (index + 1) % total;
+		updateCarousel();
+	});
+</script>
