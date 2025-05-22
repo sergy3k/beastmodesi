@@ -4,23 +4,25 @@ interface Props {
     reseña: string;
     usuario: string;
     cargo: string;
+    pfp: string;
 }
 
-const {reseña = "RESEÑA DEFECTUOSA", usuario = "Usuario", cargo = "Cargo"} = Astro.props;
+const {reseña = "RESEÑA DEFECTUOSA", usuario = "Usuario", cargo = "Cargo",pfp = "pfp"} = Astro.props;
 ---
-
-
-<figure id="BEASTREVIEWS" class="max-w-screen-md mt-40 mx-auto text-center mb-30 bg-[#3e3e3e]  p-4 rounded-2xl">
+<figure id="BEASTREVIEWS" class="max-w-screen-md mt-40 mx-auto text-center mb-30 bg-[#3e3e3e] p-4 rounded-2xl">
     <div class="flex items-center justify-center mb-4 text-yellow-300">
-    <h2 class="text-3xl font-bold text-white">{usuario}</h2>
+        <h2 class="text-3xl font-bold text-white">{usuario}</h2>
     </div>
     <blockquote>
         <p class="text-2xl font-semibold text-gray-900 dark:text-white">{reseña}</p>
     </blockquote>
-    <figcaption class="flex items-center justify-center mt-6 space-x-3 rtl:space-x-reverse">
-        <img class="w-6 h-6 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png" alt="profile picture">
+    <figcaption class="flex flex-col items-center justify-center mt-6 space-y-3">
+        <img 
+            class="w-40 h-40 rounded-full object-cover mb-4" 
+            src={pfp}
+            alt="profile picture"
+        >
         <div class="flex items-center divide-x-2 rtl:divide-x-reverse divide-gray-300 dark:divide-gray-700">
-        
             <cite class="ps-3 text-sm text-gray-500 dark:text-gray-400">{cargo}</cite>
         </div>
     </figcaption>

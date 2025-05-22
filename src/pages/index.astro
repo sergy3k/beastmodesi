@@ -18,25 +18,42 @@ import Review from '../components/Review.astro';
 
 
 	<div class="relative w-full max-w-2xl mx-auto mt-10 mb-20">
-		<button id="prev-review" class="absolute left-[-50px] top-[250px] -translate-y-1/2 bg-gray-500 hover:bg-gray-800 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-10 w-10">
+		<button id="prev-review" class="absolute left-[-50px] top-1/2 -translate-y-1/2 bg-[#232323] hover:bg-gray-800 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-14 w-14 text-3xl">
 			&#8592;
 		</button>
 
 		<div id="review-container" class="overflow-hidden relative">
 			<div id="review-track" class="flex transition-transform duration-500 ease-in-out">
 				<div class="w-full flex-shrink-0 px-4">
-					<Review usuario="CHRIS BUMSTEAD" cargo="6 VECES GANADOR DEL MR OLYMPIA" reseña='"La uso en todas mis preparaciones, sin ella mis entrenos no son lo mismo"' />
+					<Review 
+						usuario="CHRIS BUMSTEAD" 
+						cargo="6 VECES GANADOR DEL MR OLYMPIA" 
+						reseña='"La uso en todas mis preparaciones, sin ella mis entrenos no son lo mismo"' 
+						pfp="https://www.gymshark.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fwl6q2in9o7k3%2F4YOjnp32baAK0RNEUo1pI8%2F53e327aa51e8133f7de055951016d5ca%2FLook_One_4x5.jpg&w=3840&q=90"
+					/>
 				</div>
 				<div class="w-full flex-shrink-0 px-4">
-					<Review usuario="Laura Fernández" cargo="Entrenadora Personal" reseña='"Una experiencia increíble, superó todas mis expectativas. ¡Volveré sin duda!"' />
+					<Review 
+						usuario="Ramon Dino" 
+						cargo="Culturista Mr Olympia" 
+						reseña='"Una experiencia increíble, superó todas mis expectativas."' 
+						pfp="https://images.squarespace-cdn.com/content/v1/659d79bfcbafbe5e3269d464/1a03baa1-3541-4903-858c-2a48921964fa/ramon_dino_historia.jpg"
+					/>
 				</div>
 				<div class="w-full flex-shrink-0 px-4">
-					<Review usuario="Carlos Martínez" cargo="Atleta Profesional" reseña='"El mejor entrenamiento que he tenido en años. ¡Altamente recomendado!"' />
+					<Review 
+						usuario="Carlos Belcast" 
+						cargo="Atleta Profesional" 
+						reseña='"El mejor entrenamiento que he tenido en años. ¡Altamente recomendado!"' 
+						pfp="https://static.wixstatic.com/media/886bca_09193b17c3e4424caa1d0469e48232d0~mv2.jpg/v1/fill/w_954,h_1280,al_c,q_85,enc_avif,quality_auto/453142549_495069313202574_3139527145894202988_n-transformed_edited.jpg"
+					/>
 				</div>
 			</div>
 		</div>
 
-		<button id="next-review" class="absolute right-[-50px] top-[250px] -translate-y-1/2 bg-gray-500 hover:bg-gray-800 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-10 w-10">
+		<button id="next-review" class="absolute right-[-50px] top-1/2 -translate-y-1/2 bg-[#232323] hover:bg-gray-800 text-white px-4 py-2 rounded-full z-10 flex items-center justify-center h-14 w-14 text-3xl">
+			&#8594;
+		</button>
 			&#8594;
 		</button>
 	</div>

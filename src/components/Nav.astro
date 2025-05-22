@@ -22,7 +22,7 @@ import "../styles/global.css";
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 z-50 flex flex-col items-center justify-center space-y-8 text-2xl text-orange-400 hidden md:hidden">
+    <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex flex-col items-center justify-center space-y-8 text-2xl text-orange-400 hidden md:hidden">
         <button id="close-mobile-menu" class="absolute top-6 right-8 text-4xl text-orange-400">&times;</button>
         <a href="#PRODUCTS" class="hover:text-orange-500 hover:underline" onclick="document.getElementById('mobile-menu').classList.add('hidden')">PRODUCTOS</a>
         <a href="#ABOUTUS" class="hover:text-orange-500 hover:underline" onclick="document.getElementById('mobile-menu').classList.add('hidden')">SOBRE NOSOTROS</a>
@@ -60,6 +60,8 @@ import "../styles/global.css";
     if (mobileMenuButton && mobileMenu) {
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.remove('bg-opacity-90');
+            mobileMenu.classList.add('bg-opacity-50');
         });
     }
     if (closeMobileMenu && mobileMenu) {
